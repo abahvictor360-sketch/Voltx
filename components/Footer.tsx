@@ -52,7 +52,7 @@ export default function Footer() {
       </div>
       <div className="border-t border-black/5">
         <div className="container-x flex flex-col items-start justify-between gap-3 py-6 text-xs text-muted sm:flex-row sm:items-center">
-          <p>© {new Date().getFullYear()} VoltX. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} VoltX. Concept project — VoltX is a fictional brand created for portfolio purposes.</p>
           <div className="flex gap-6">
             <Link href="/privacy" className="hover:text-ink">Privacy Policy</Link>
             <Link href="/terms" className="hover:text-ink">Terms of Use</Link>
