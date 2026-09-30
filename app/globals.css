@@ -65,3 +65,19 @@ body {
 .animate-fade-up {
   animation: fade-up 0.7s ease-out both;
 }
+
+/* Soft-fade the hero video into the page so there's no hard edge next to the text */
+.hero-media {
+  -webkit-mask-image: linear-gradient(to bottom, #000 70%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 70%, transparent 100%);
+}
+@media (min-width: 1024px) {
+  .hero-media {
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.35) 14%, #000 38%),
+      linear-gradient(to bottom, #000 78%, transparent 100%);
+    -webkit-mask-composite: source-in;
+    mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.35) 14%, #000 38%),
+      linear-gradient(to bottom, #000 78%, transparent 100%);
+    mask-composite: intersect;
+  }
+}

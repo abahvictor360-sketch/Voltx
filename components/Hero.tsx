@@ -19,10 +19,16 @@ export default function Hero() {
     <section className="relative overflow-hidden bg-gradient-to-b from-[#eef1f3] to-white">
       {/* Hero GIF */}
       <div className="relative h-72 w-full sm:h-96 lg:absolute lg:inset-y-0 lg:right-0 lg:h-auto lg:w-[64%]">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="/images/hero.gif" alt="VoltX electric car at a charging station" className="h-full w-full object-cover" />
-        <div className="absolute inset-0 hidden bg-gradient-to-r from-[#eef1f3] via-[#eef1f3]/40 to-transparent lg:block lg:w-1/2" />
-        <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-white to-transparent" />
+        <video
+          src="/images/hero.mp4"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          aria-label="VoltX electric sedan driving on the road"
+          className="hero-media h-full w-full object-cover"
+        />
       </div>
 
       <div className="container-x relative">
@@ -73,8 +79,7 @@ export default function Hero() {
             <button onClick={() => setVideo(false)} aria-label="Close video" className="absolute -top-12 right-0 rounded-full bg-white/10 p-2 text-white hover:bg-white/20">
               <X className="h-5 w-5" />
             </button>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/images/hero.gif" alt="VoltX film" className="w-full rounded-2xl" />
+            <video src="/images/hero.mp4" autoPlay controls loop playsInline className="w-full rounded-2xl bg-black" />
             <Link href="/models" className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-volt-300">
               Discover the lineup <ArrowRight className="h-4 w-4" />
             </Link>
