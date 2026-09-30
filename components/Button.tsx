@@ -21,10 +21,10 @@ export default function Button({ href, children, variant = "primary", arrow = tr
   return (
     <Link
       href={href}
-      className={`inline-flex items-center gap-2 rounded-lg px-5 py-3 text-sm font-semibold transition ${styles[variant]} ${className}`}
+      className={`group inline-flex items-center gap-2 rounded-lg px-5 py-3 text-sm font-semibold transition hover:-translate-y-0.5 active:translate-y-0 ${styles[variant]} ${className}`}
     >
       {children}
-      {arrow && <ArrowRight className="h-4 w-4" />}
+      {arrow && <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />}
     </Link>
   );
 }

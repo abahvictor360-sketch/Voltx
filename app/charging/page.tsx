@@ -1,3 +1,4 @@
+import CountUp from "@/components/CountUp";
 import type { Metadata } from "next";
 import Image from "next/image";
 import { Check, Smartphone, Zap, Home, MapPin } from "lucide-react";
@@ -64,7 +65,7 @@ export default function ChargingPage() {
             <p className="mt-4 text-white/70">One app, one account, one bill. Plug in at VoltX Hubs and partner networks across 45+ countries — the car handles authentication automatically.</p>
             <div className="mt-10 grid grid-cols-3 gap-6">
               {[["500K+", "Stations"], ["45+", "Countries"], ["99.2%", "Uptime"]].map(([v, l]) => (
-                <div key={l}><p className="text-3xl font-bold text-volt-300">{v}</p><p className="text-sm text-white/60">{l}</p></div>
+                <div key={l}><p className="text-3xl font-bold text-volt-300"><CountUp value={v} /></p><p className="text-sm text-white/60">{l}</p></div>
               ))}
             </div>
           </div>

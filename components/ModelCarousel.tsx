@@ -15,7 +15,7 @@ export default function ModelCarousel() {
   };
 
   return (
-    <div className="relative">
+    <div data-reveal-me className="relative">
       <button
         onClick={() => scroll(-1)}
         aria-label="Previous models"

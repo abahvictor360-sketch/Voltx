@@ -1,3 +1,4 @@
+import CountUp from "@/components/CountUp";
 import Image from "next/image";
 import { BatteryCharging, Car, Globe, Leaf, RefreshCw, ShieldCheck, Trees, Zap, Gauge } from "lucide-react";
 import Hero from "@/components/Hero";
@@ -40,7 +41,7 @@ export default function Home() {
             <div key={title} className="flex gap-3 md:justify-center md:px-4">
               <Icon className="mt-0.5 h-7 w-7 shrink-0 text-volt-500" strokeWidth={1.6} />
               <div>
-                <p className="text-sm font-semibold leading-tight">{title}</p>
+                <p className="text-sm font-semibold leading-tight"><CountUp value={title} /></p>
                 <p className="text-sm font-semibold leading-tight">{sub}</p>
                 <p className="mt-2 text-xs text-muted">{note}</p>
               </div>
@@ -97,7 +98,7 @@ export default function Home() {
             {impact.map(({ icon: Icon, value, label, note }) => (
               <div key={label} className="text-center">
                 <Icon className="mx-auto h-9 w-9 text-volt-500" strokeWidth={1.4} />
-                <p className="mt-4 text-3xl font-bold">{value}</p>
+                <p className="mt-4 text-3xl font-bold"><CountUp value={value} /></p>
                 <p className="mt-1 text-xs font-semibold">{label}</p>
                 <p className="text-xs text-muted">{note}</p>
               </div>

@@ -1,3 +1,4 @@
+import CountUp from "@/components/CountUp";
 import type { Metadata } from "next";
 import { Globe, Leaf, Recycle, RefreshCw, Sun, Trees } from "lucide-react";
 import PageHero from "@/components/PageHero";
@@ -35,7 +36,7 @@ export default function SustainabilityPage() {
           {impact.map(({ icon: Icon, value, label }) => (
             <div key={label} className="text-center">
               <Icon className="mx-auto h-9 w-9 text-volt-500" strokeWidth={1.4} />
-              <p className="mt-4 text-4xl font-bold">{value}</p>
+              <p className="mt-4 text-4xl font-bold"><CountUp value={value} /></p>
               <p className="mt-1 text-sm text-muted">{label}</p>
             </div>
           ))}

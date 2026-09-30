@@ -1,3 +1,4 @@
+import CountUp from "@/components/CountUp";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Image from "next/image";
@@ -41,7 +42,7 @@ export default async function ModelPage({ params }: { params: Promise<{ slug: st
         <div className="grid grid-cols-2 gap-6 rounded-2xl bg-ink p-8 text-white sm:grid-cols-3 lg:grid-cols-6">
           {specs.map((s) => (
             <div key={s.label}>
-              <p className="text-2xl font-bold text-volt-300">{s.value}</p>
+              <p className="text-2xl font-bold text-volt-300"><CountUp value={s.value} /></p>
               <p className="mt-1 text-xs text-white/60">{s.label}</p>
             </div>
           ))}
