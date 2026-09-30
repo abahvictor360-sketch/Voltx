@@ -19,7 +19,7 @@ export default function ModelCarousel() {
       <button
         onClick={() => scroll(-1)}
         aria-label="Previous models"
-        className="absolute -left-2 top-1/2 z-10 hidden h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-volt-300 bg-white text-volt-600 shadow-sm hover:bg-volt-50 md:flex xl:-left-14"
+        className="absolute -left-2 top-1/2 z-10 hidden h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-volt-300 bg-white text-volt-600 shadow-sm hover:bg-volt-50 md:flex min-[1360px]:-left-14"
       >
         <ChevronLeft className="h-5 w-5" />
       </button>
@@ -33,7 +33,7 @@ export default function ModelCarousel() {
       <button
         onClick={() => scroll(1)}
         aria-label="Next models"
-        className="absolute -right-2 top-1/2 z-10 hidden h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-volt-300 bg-white text-volt-600 shadow-sm hover:bg-volt-50 md:flex xl:-right-14"
+        className="absolute -right-2 top-1/2 z-10 hidden h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-volt-300 bg-white text-volt-600 shadow-sm hover:bg-volt-50 md:flex min-[1360px]:-right-14"
       >
         <ChevronRight className="h-5 w-5" />
       </button>

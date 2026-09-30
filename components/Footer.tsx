@@ -13,8 +13,8 @@ const socials = [
 export default function Footer() {
   return (
     <footer className="border-t border-black/5 bg-white">
-      <div className="container-x grid gap-10 py-14 md:grid-cols-[1.4fr_repeat(5,1fr)]">
-        <div>
+      <div className="container-x grid grid-cols-2 gap-x-6 gap-y-10 py-14 sm:grid-cols-3 lg:grid-cols-[minmax(0,1.4fr)_repeat(5,minmax(0,1fr))]">
+        <div className="col-span-2 sm:col-span-3 lg:col-span-1">
           <Logo />
           <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted">
             VoltX is committed to accelerating the world&apos;s transition to sustainable mobility with innovation,
